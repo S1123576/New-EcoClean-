@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Google 地圖初始化
     if (document.getElementById("map")) {
-        const initialPosition = { lat: 25.033964, lng: 121.564468 }; // 台北101位置
+        const initialPosition = { lat: 24.970128, lng: 121.263757 }; // 元智大學的經緯度
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 14,
+            zoom: 16, // 調整地圖縮放等級
             center: initialPosition,
         });
         new google.maps.Marker({
