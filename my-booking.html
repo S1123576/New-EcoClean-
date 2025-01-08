@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的預約 - EcoClean</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAksbXFNLVm_hsTkDTVpLROnH6ppnYCzOM"></script>
+  <script src="scripts.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
-  <!-- 選單列 -->
   <header class="navbar">
     <div class="container">
       <img src="images/logo.png" alt="EcoClean Logo" class="logo">
@@ -23,8 +23,8 @@
     </div>
   </header>
 
-  <!-- 我的預約內容 -->
   <main>
+    <!-- 我的預約列表 -->
     <section class="booking-history">
       <h1>我的預約</h1>
       <div class="booking-list">
@@ -33,16 +33,33 @@
           <p>時間：上午 10:00</p>
           <p>垃圾類型：一般廢棄物</p>
         </div>
+        <!-- 其他預約項目 -->
       </div>
     </section>
 
-    <!-- Google 地圖 -->
+    <!-- 即時定位 -->
     <section class="map-section">
       <h2>垃圾車即時定位</h2>
       <div id="map"></div>
     </section>
   </main>
 
-  <script src="scripts.js"></script>
+  <script>
+    function initMap() {
+      const truckLocation = { lat: 25.033964, lng: 121.564468 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: truckLocation,
+      });
+
+      new google.maps.Marker({
+        position: truckLocation,
+        map: map,
+        title: '垃圾車位置',
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initMap);
+  </script>
 </body>
 </html>
