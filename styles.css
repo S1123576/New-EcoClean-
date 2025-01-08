@@ -1,81 +1,72 @@
-/* 全域樣式設定 */
+/* 基本設置 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5f5; /* 背景淡灰色 */
-    color: #333; /* 主要文字深灰色 */
+    background: #f9f9f9;
+    color: #333;
 }
 
-/* 導覽列樣式 */
+/* 導覽列 */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #00C9FF, #92FE9D); /* 漸層背景 */
-    color: white;
+    background: linear-gradient(to right, #00C9FF, #92FE9D);
+    padding: 15px 20px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* 首頁內容區塊樣式 */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: url('images/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 48px;
+.menu {
+    display: flex;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-.hero p {
-    font-size: 18px;
-    margin: 20px 0;
+.menu li {
+    margin: 0 10px;
 }
 
-.hero .button {
-    display: inline-block;
-    background: #92FE9D;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
+.language-selector {
+    padding: 5px;
     border-radius: 5px;
 }
 
-.hero .button:hover {
+/* 主要區塊樣式 */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/hero-bg.jpg') center / cover no-repeat;
+    padding: 100px 20px;
+    color: white;
+}
+
+.cta-button {
+    background: #92FE9D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
     background: #00C9FF;
 }
 
-/* 內容區塊樣式 */
-.section {
+/* 區塊切換動畫 */
+.info-section, .experience-section {
     padding: 40px 20px;
     text-align: center;
-    background: #fff;
-    margin: 20px 0;
 }
 
-.section h2 {
-    font-size: 32px;
-    color: #333;
-}
-
-.section p {
-    font-size: 16px;
-    margin: 20px 0;
-    color: #555;
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
