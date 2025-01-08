@@ -1,118 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoClean 到府垃圾收運服務</title>
+  <title>EcoClean - 首頁</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Google Maps API -->
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAksbXFNLVm_hsTkDTVpLROnH6ppnYCzOM&callback=initMap"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">EcoClean</div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="nav-link">首頁</a></li>
-        <li><a href="#about" class="nav-link">關於我們</a></li>
-        <li><a href="#my-booking" class="nav-link">我的預約</a></li>
-        <li><a href="#booking" class="nav-link">立即預約</a></li>
-        <li>
-          <select id="language" onchange="switchLanguage()">
-            <option value="zh">繁體中文</option>
-            <option value="en">English</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
+  <!-- 選單列 -->
+  <header class="navbar">
+    <div class="container">
+      <img src="images/logo.png" alt="EcoClean Logo" class="logo">
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="active">首頁</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="my-booking.html">我的預約</a></li>
+          <li><a href="booking.html">立即預約</a></li>
+          <li>
+            <select class="language-selector">
+              <option value="zh-TW">繁體中文</option>
+              <option value="en">English</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title" data-lang="title">到府垃圾收運服務</h1>
-      <p class="hero-subtitle" data-lang="subtitle">便捷的垃圾清運解決方案</p>
-      <button onclick="scrollToSection('about')" class="btn-primary" data-lang="learn-more">了解更多</button>
-    </div>
-  </section>
-
-  <!-- Content Section -->
-  <section id="about" class="section">
-    <h2 class="section-title" data-lang="about-title">創新的清運方式</h2>
-    <p class="section-subtitle" data-lang="about-subtitle">讓垃圾清運變得簡單無比</p>
-    <div class="features">
-      <div>
-        <img src="feature1.jpg" alt="靈活的預約時間">
-        <h3 data-lang="feature1-title">靈活的預約時間</h3>
-        <p data-lang="feature1-desc">您可以隨時選擇最適合您的垃圾收運時間，完美契合您的生活節奏。</p>
+  <!-- 首頁內容 -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>到府收垃圾服務</h1>
+        <p>創新的清運方式，讓垃圾清運變得簡單無比</p>
+        <a href="#service-info" class="cta-button">了解更多</a>
       </div>
-      <div>
-        <img src="feature2.jpg" alt="專業的服務團隊">
-        <h3 data-lang="feature2-title">專業的服務團隊</h3>
-        <p data-lang="feature2-desc">我們的專業團隊確保每次垃圾清運都高效、安全。</p>
+    </section>
+
+    <!-- 創新清運方式 -->
+    <section id="service-info" class="info-section">
+      <h2>創新的清運方式</h2>
+      <p>讓垃圾清運變得簡單無比</p>
+      <div class="info-cards">
+        <div class="card">
+          <img src="images/flexible-time.jpg" alt="靈活時間">
+          <h3>靈活的預約時間</h3>
+        </div>
+        <div class="card">
+          <img src="images/professional-team.jpg" alt="專業團隊">
+          <h3>專業的服務團隊</h3>
+        </div>
+        <div class="card">
+          <img src="images/online-ease.jpg" alt="簡單操作">
+          <h3>簡單的在線操作</h3>
+        </div>
       </div>
-      <div>
-        <img src="feature3.jpg" alt="簡單的在線操作">
-        <h3 data-lang="feature3-title">簡單的在線操作</h3>
-        <p data-lang="feature3-desc">通過我們的平台輕鬆完成預約，操作簡單快捷。</p>
+    </section>
+
+    <!-- 優質的服務體驗 -->
+    <section class="experience-section">
+      <h2>優質的服務體驗</h2>
+      <p>我們以客戶為中心，持續提升服務質量</p>
+      <div class="info-cards">
+        <div class="card">
+          <img src="images/life-quality.jpg" alt="提升生活品質">
+          <h3>提升生活品質</h3>
+          <p>讓您的生活更加輕鬆自在。</p>
+        </div>
+        <div class="card">
+          <img src="images/customer-support.jpg" alt="客戶支持">
+          <h3>專屬的客戶支持</h3>
+          <p>提供24小時服務，隨時解決您的疑問。</p>
+        </div>
+        <div class="card">
+          <img src="images/sustainability.jpg" alt="環保與可持續">
+          <h3>環保與可持續</h3>
+          <p>推廣資源回收與再利用。</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Map Section -->
-  <section id="my-booking" class="section">
-    <h2 class="section-title" data-lang="booking-title">我的預約</h2>
-    <p class="section-subtitle" data-lang="booking-desc">查看您的預約並跟蹤垃圾車位置</p>
-    <div id="map"></div>
-  </section>
-
-  <!-- Booking Section -->
-  <section id="booking" class="section">
-    <h2 class="section-title" data-lang="booking-form-title">立即預約</h2>
-    <form id="booking-form">
-      <label for="name" data-lang="label-name">姓名：</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="phone" data-lang="label-phone">聯絡電話：</label>
-      <input type="text" id="phone" name="phone" required>
-
-      <label for="address" data-lang="label-address">地址：</label>
-      <input type="text" id="address" name="address" required>
-
-      <label for="email" data-lang="label-email">電子信箱：</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="date" data-lang="label-date">預約日期：</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="volume" data-lang="label-volume">垃圾體積：</label>
-      <select id="volume" name="volume">
-        <option value="small" data-lang="volume-small">小型</option>
-        <option value="medium" data-lang="volume-medium">中型</option>
-        <option value="large" data-lang="volume-large">大型</option>
-        <option value="extra-large" data-lang="volume-extra-large">超大型</option>
-      </select>
-
-      <label for="type" data-lang="label-type">垃圾種類：</label>
-      <select id="type" name="type">
-        <option value="recyclable" data-lang="type-recyclable">可回收</option>
-        <option value="non-recyclable" data-lang="type-non-recyclable">不可回收</option>
-        <option value="food-waste" data-lang="type-food-waste">廚餘</option>
-      </select>
-
-      <button type="submit" class="btn-primary" data-lang="submit">送出</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 EcoClean. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    </section>
+  </main>
 </body>
 </html>
