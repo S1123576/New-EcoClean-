@@ -1,72 +1,104 @@
-/* 基本設置 */
+/* 全局樣式 */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F3F4F6;
+  color: #333;
 }
 
-/* 導覽列 */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+/* 導覽列樣式 */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, #00C9FF, #92FE9D);
-    padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0099CC;
+  padding: 15px 20px;
 }
 
-.menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.menu li {
-    margin: 0 10px;
+.navbar .menu li {
+  margin: 0 15px;
 }
 
-.language-selector {
-    padding: 5px;
-    border-radius: 5px;
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
-/* 主要區塊樣式 */
+.navbar .menu a:hover {
+  color: #FF8800;
+}
+
+/* 英雄區域樣式 */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('images/hero-bg.jpg') center / cover no-repeat;
-    padding: 100px 20px;
-    color: white;
+  background: linear-gradient(135deg, #0099CC, #FF8800);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
 .cta-button {
-    background: #92FE9D;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
+  background: white;
+  color: #0099CC;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #00C9FF;
+  background: #FF8800;
+  color: white;
 }
 
-/* 區塊切換動畫 */
+/* 信息區塊樣式 */
 .info-section, .experience-section {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 60px 20px;
 }
 
 .info-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
