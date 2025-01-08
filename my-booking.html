@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的預約 - EcoClean</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAksbXFNLVm_hsTkDTVpLROnH6ppnYCzOM"></script>
+</head>
+<body>
+  <!-- 選單列 -->
+  <header class="navbar">
+    <div class="container">
+      <img src="images/logo.png" alt="EcoClean Logo" class="logo">
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="my-booking.html" class="active">我的預約</a></li>
+          <li><a href="booking.html">立即預約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 我的預約內容 -->
+  <main>
+    <section class="booking-history">
+      <h1>我的預約</h1>
+      <div class="booking-list">
+        <div class="booking-item">
+          <h3>預約日期：2025-01-15</h3>
+          <p>時間：上午 10:00</p>
+          <p>垃圾類型：一般廢棄物</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google 地圖 -->
+    <section class="map-section">
+      <h2>垃圾車即時定位</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
