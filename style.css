@@ -6,55 +6,89 @@ body {
     box-sizing: border-box;
 }
 
+/* 選單列 */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: #007bff;
-    color: white;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-
-.home-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url('background.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-}
-
-.hero-btn {
-    padding: 10px 20px;
     background: #28a745;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
-.content-section {
-    padding: 50px 20px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* 首頁 */
+.hero-section {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: #f9f9f9;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background: white;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 關於我們 */
+.about-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature {
+    width: 30%;
+}
+
+/* 我的預約 */
+#map {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* 預約表單 */
+.booking-section {
+    padding: 50px;
+    text-align: center;
 }
 
 form {
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
