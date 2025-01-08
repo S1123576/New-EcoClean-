@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean 到府收垃圾服務</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAksbXFNLVm_hsTkDTVpLROnH6ppnYCzOM"></script>
+</head>
+<body>
+    <!-- 選單列 -->
+    <header class="navbar">
+        <div class="logo">EcoClean</div>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#booking">我的預約</a></li>
+                <li><a href="#contact">立即預約</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 首頁橫幅 -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>到府收垃圾服務</h1>
+            <p>輕鬆解決垃圾清運的煩惱，享受更便利的生活</p>
+            <a href="#services" class="hero-btn">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 創新方式 -->
+    <section id="services" class="services-section">
+        <h2>內容創新的清運方式</h2>
+        <p>讓垃圾清運變得簡單無比</p>
+        <div class="features">
+            <div class="feature-item">
+                <img src="feature1.jpg" alt="靈活的預約時間">
+                <h3>靈活的預約時間</h3>
+            </div>
+            <div class="feature-item">
+                <img src="feature2.jpg" alt="專業的服務團隊">
+                <h3>專業的服務團隊</h3>
+            </div>
+            <div class="feature-item">
+                <img src="feature3.jpg" alt="簡單的在線操作">
+                <h3>簡單的在線操作</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 優質服務 -->
+    <section id="about" class="about-section">
+        <h2>優質的服務體驗</h2>
+        <p>我們以客戶為中心，持續提升服務質量</p>
+        <div class="features">
+            <div class="feature-item">
+                <h3><strong>提升生活品質：</strong></h3>
+                <p>透過我們的服務，您不再需要擔心垃圾清運的問題，讓您的生活更加輕鬆自在。</p>
+            </div>
+            <div class="feature-item">
+                <h3><strong>專屬的客戶支持：</strong></h3>
+                <p>我們提供 24 小時客戶支持，隨時隨地解答您的疑問，確保您的需求得到滿足。</p>
+            </div>
+            <div class="feature-item">
+                <h3><strong>環保與可持續：</strong></h3>
+                <p>我們致力於推廣環保理念，確保垃圾清運的同時，注重資源的回收與再利用，為地球出一份力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客戶評價 -->
+    <section id="testimonials" class="testimonials">
+        <h2>客戶的好評</h2>
+        <p>我們的服務得到了眾多客戶的認可與讚賞</p>
+        <blockquote>「非常方便的服務：我很喜歡這個服務，讓我能夠在忙碌的生活中輕鬆處理垃圾！」</blockquote>
+        <blockquote>「專業的團隊：服務人員非常專業，讓我對垃圾清運有了全新的認識。」</blockquote>
+        <blockquote>「值得信賴的選擇：我已經多次使用這個平台，每次都超出我的期待，強烈推薦！」</blockquote>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer>
+        <p>&copy; 2025 EcoClean 到府收垃圾服務</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
