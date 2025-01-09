@@ -1,72 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>立即預約 - EcoClean</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean - 立即預約</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <img src="images/logo.png" alt="EcoClean Logo" class="logo">
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">首頁</a></li>
-          <li><a href="about.html">關於我們</a></li>
-          <li><a href="my-booking.html">我的預約</a></li>
-          <li><a href="booking.html" class="active">立即預約</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">EcoClean</a>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="my-booking.html">我的預約</a></li>
+                <li><a href="booking.html">立即預約</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <!-- 預約表單 -->
-    <section class="booking-form-section">
-      <h1>立即預約</h1>
-      <form id="booking-form">
-        <label for="name">姓名：</label>
-        <input type="text" id="name" name="name" required>
+    <!-- Booking Form -->
+    <section class="section">
+        <h2>立即預約</h2>
+        <form class="booking-form">
+            <label for="name">姓名</label>
+            <input type="text" id="name" required>
+            
+            <label for="phone">電話</label>
+            <input type="tel" id="phone" required>
 
-        <label for="phone">聯絡電話：</label>
-        <input type="tel" id="phone" name="phone" required>
+            <label for="date">日期</label>
+            <input type="date" id="date" required>
 
-        <label for="email">電子信箱：</label>
-        <input type="email" id="email" name="email" required>
+            <label for="type">垃圾種類</label>
+            <select id="type">
+                <option value="可回收">可回收</option>
+                <option value="不可回收">不可回收</option>
+                <option value="廚餘">廚餘</option>
+            </select>
 
-        <label for="date">預約日期：</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="volume">垃圾體積：</label>
-        <select id="volume" name="volume" required>
-          <option value="small">小型</option>
-          <option value="medium">中型</option>
-          <option value="large">大型</option>
-          <option value="extra-large">超大型</option>
-        </select>
-
-        <label for="type">垃圾種類：</label>
-        <select id="type" name="type" required>
-          <option value="recyclable">可回收</option>
-          <option value="non-recyclable">不可回收</option>
-          <option value="food-waste">廚餘</option>
-        </select>
-
-        <button type="submit">送出預約</button>
-      </form>
+            <button type="submit">提交</button>
+        </form>
     </section>
-  </main>
-
-  <script>
-    document.getElementById('booking-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const bookingData = Object.fromEntries(formData.entries());
-      localStorage.setItem('bookingData', JSON.stringify(bookingData));
-      window.location.href = 'confirmation.html';
-    });
-  </script>
 </body>
 </html>
