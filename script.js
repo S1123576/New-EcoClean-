@@ -1,41 +1,35 @@
-// 初始化 Google 地圖
+// Smooth Scrolling for Internal Links
+document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+
+// Initialize Google Map
 function initMap() {
-  const truckLocation = { lat: 25.033964, lng: 121.564468 }; // 初始垃圾車位置
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: truckLocation,
-  });
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+        const map = new google.maps.Map(mapElement, {
+            center: { lat: 25.0330, lng: 121.5654 }, // Example: Taipei location
+            zoom: 14,
+        });
 
-  const truckMarker = new google.maps.Marker({
-    position: truckLocation,
-    map: map,
-    title: '垃圾車位置',
-  });
-
-  // 模擬更新位置功能
-  setInterval(() => {
-    const newLat = truckLocation.lat + (Math.random() - 0.5) * 0.01;
-    const newLng = truckLocation.lng + (Math.random() - 0.5) * 0.01;
-    truckMarker.setPosition({ lat: newLat, lng: newLng });
-    map.panTo({ lat: newLat, lng: newLng });
-  }, 5000);
+        const marker = new google.maps.Marker({
+            position: { lat: 25.0330, lng: 121.5654 },
+            map: map,
+            title: '垃圾車當前位置',
+        });
+    }
 }
 
-// 表單提交處理
-document.getElementById('booking-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  alert('您的預約已提交成功！我們會盡快與您聯繫。');
-  // 模擬跳轉到確認頁面
-  window.location.href = 'my-booking.html';
-});
-
-// 語言切換
-document.querySelector('.language-selector')?.addEventListener('change', (event) => {
-  const selectedLang = event.target.value;
-  if (selectedLang === 'en') {
-    alert('Language switched to English.');
-    // 實現語言切換的後續功能
-  } else {
-    alert('語言已切換為繁體中文。');
-  }
-});
+// Attach Google Maps Script
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+script.async = true;
+script.defer = true;
+document.body.appendChild(script);
