@@ -9,15 +9,18 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar">
-            <a class="navbar-brand" href="index.html">EcoClean</a>
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="about.html">關於我們</a></li>
-                <li><a href="my-booking.html">我的預約</a></li>
-                <li><a href="booking.html">立即預約</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <a href="index.html">首頁</a>
+            <a href="about.html">關於我們</a>
+            <a href="my-booking.html">我的預約</a>
+            <a href="booking.html">立即預約</a>
+            <div class="language-switch">
+                <select id="language-select">
+                    <option value="zh" selected>中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
     </header>
 
     <!-- Booking Form -->
@@ -26,20 +29,16 @@
         <form class="booking-form">
             <label for="name">姓名</label>
             <input type="text" id="name" required>
-            
             <label for="phone">電話</label>
             <input type="tel" id="phone" required>
-
             <label for="date">日期</label>
             <input type="date" id="date" required>
-
             <label for="type">垃圾種類</label>
             <select id="type">
                 <option value="可回收">可回收</option>
                 <option value="不可回收">不可回收</option>
                 <option value="廚餘">廚餘</option>
             </select>
-
             <button type="submit">提交</button>
         </form>
     </section>
